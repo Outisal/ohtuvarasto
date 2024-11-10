@@ -37,9 +37,8 @@ def main():
 
     for name, desc, method, amount in actions:
         print(f"\n{name}{desc}")
-        result = method(amount)
-        if result is not None:  # Only print result if it's not None
-            print(f"saatiin {result}")
+        if method(amount) is not None:  # Only print result if it's not None
+            print(f"saatiin {method(amount)}")
         print(f"{name}: {olutta if 'Olut' in desc else mehua}")
 
 if __name__ == "__main__":
